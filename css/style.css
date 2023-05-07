@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobal-tblue: hsl(234, 85%, 45%);
+   /*Gradients background*/
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    /*Gradients circle*/
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    /*Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    background-color: var(--Pale-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    background-color: var(--White);
+    width: 500px;
+    border-radius: 2rem;
+    box-shadow: 1px 4px 4px rgba(0,0,0,.5);
+}
+
+.result{
+    background: linear-gradient(var(--Light-slate-blue),var(--Light-royal-blue));
+    text-align: center;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.result .your{
+    color:var(--Light-lavender);
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.result .circle{
+    background: linear-gradient( var(--Violet-blue) , var(--Persian-blue));
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.circle h2{
+    color: var(--White);
+    font-size: 4rem;
+}
+.circle p{
+    color: var(--Light-lavender);
+}
+
+.result h3{
+    color: var(--White);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.result .info{
+    color:var(--Light-lavender);
+}
+
+
+.summary{
+    width: 50%;
+    padding: 1rem;
+    color: var(--Dark-gray-blue);
+}
+
+.summary .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 0rem;
+}
+
+.container p{
+    color: var(--Light-lavender);
+}
+.container span {
+    color: var(--Dark-gray-blue);
+}
+
+.container .row {
+    display: flex;
+}
+
+.container > .Reaction,
+.container > .Memory,
+.container > .Verbal,
+.container > .Visual{
+    margin: .7rem 0px;
+}
+
+.container .Reaction{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsla(0, 100%, 67%, 0.1);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+}
+
+
+.Reaction h3{
+    color: var(--Light-red);
+}
+
+
+.container .Memory{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(39, 100%, 56%, 0.1);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+}
+.Memory h3{
+    color: var(--Orangey-yellow);
+}
+
+.container .Verbal{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(166, 100%, 37%, 0.1);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+}
+.Verbal h3{
+    color: var(--Green-teal);
+}
+
+
+.container .Visual{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(234, 85%, 45%, 0.1);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+}
+.Visual h3{
+    color: var(--Cobal-tblue);
+}
+
+.summary .btn{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+}
+
+
+
+
+.attribution {
+    margin: 30px;
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:520px) {
+    body{
+        align-items: flex-start;
+    }
+
+    main{
+        box-shadow: none;
+        flex-direction: column;
+    }
+
+    .result{
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+    .result .info{
+        width: 290px;
+    }
+
+    .summary{
+        width: 100%;
+        margin-right: 1rem;
+    }
+
+    .attribution{
+        width: 100%;
+    }
+}
